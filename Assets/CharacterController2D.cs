@@ -33,10 +33,10 @@ public class CharacterController2D : MonoBehaviour
         animator.SetFloat("horizontal", horizontal);
         animator.SetFloat("vertical", vertical);
 
-        moving = horizontal != 0 || vertical != 0;
+        moving = (horizontal != 0) || (vertical != 0);
         animator.SetBool("moving", moving);
 
-        if( horizontal != 0 || vertical != 0 )
+        if( moving )
         {
             lastMotionVector = new Vector2(
                 horizontal,
